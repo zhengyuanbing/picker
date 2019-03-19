@@ -72,13 +72,14 @@
       .mask-top
         border-bottom-1px(#ccc)
         top: 0
-        gradient-from-bottom(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.8))
+        background: linear-gradient(to bottom, rgba(255,255,255,.4), rgba(255,255,255,.8))
       .mask-bottom
         border-top-1px(#ccc)
         bottom: 0
-        gradient-from-top(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.8))
+        background: linear-gradient(to bottom, rgba(255,255,255,.4), rgba(255,255,255,.8))
     .wheel-wrapper
       flex-box()
+      padding: 0
       .wheel
         flex()
         height: 173px
