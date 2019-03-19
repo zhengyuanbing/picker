@@ -72,11 +72,11 @@
       .mask-top
         border-bottom-1px(#ccc)
         top: 0
-        background: linear-gradient(to bottom, rgba(255,255,255,.4), rgba(255,255,255,.8))
+        gradient-from-bottom(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.8))
       .mask-bottom
         border-top-1px(#ccc)
         bottom: 0
-        background: linear-gradient(to bottom, rgba(255,255,255,.4), rgba(255,255,255,.8))
+        gradient-from-top(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.8))
     .wheel-wrapper
       flex-box()
       .wheel
@@ -95,7 +95,7 @@
             white-space: nowrap
             color: #333
   .picker-footer
-    height: 10px
+    height: 20px
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5)
   .border-1px
