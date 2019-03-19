@@ -39,24 +39,26 @@
       transform: translateY(0)
       -webkit-transform: translateY(0)
     .picker-choose
-      position: relative
-      height: 50px
-      color: #878787
+      height: 40px
+      display: flex
+      justify-content: space-between
+      align-items: center
       font-size: 14px
+      border-bottom: 1px solid #e8e8e8
       .picker-title
-        line-height: 50px
-        font-size: 19px
+        font-size: 14px
         text-align: center
         color: #333
       .confirm, .cancel
-        position: absolute
+        font-size: 13px
         padding: 10px
         top: 6px
       .confirm
-        right: 0
-        color: #fa8919
+        color: #5a88e2
+        margin-right: 15px
       .cancel
-        left: 0
+        color: #999
+        margin-left: 15px
     .picker-content
       position: relative
       .mask-top, .mask-bottom
@@ -77,7 +79,6 @@
         gradient-from-top(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.8))
     .wheel-wrapper
       flex-box()
-      padding: 0 10px
       .wheel
         flex()
         height: 173px
@@ -87,7 +88,8 @@
           margin-top: 68px
           line-height: 36px
           .wheel-item
-            height: 36px
+            font-size: 16px
+            height: 38px
             overflow: hidden
             white-space: nowrap
             color: #333

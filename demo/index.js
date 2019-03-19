@@ -2,7 +2,7 @@ var nameEl = document.getElementById('chose');
 
 var first = []; /* 省，直辖市 */
 var second = []; /* 市 */
-var third = []; /* 镇 */
+// var third = []; /* 镇 */
 
 var selectedIndex = [0, 0, 0]; /* 默认选中的地区 */
 
@@ -26,13 +26,13 @@ if (city[selectedIndex[0]].hasOwnProperty('sub')) {
 }
 
 if (city[selectedIndex[0]].sub[selectedIndex[1]].hasOwnProperty('sub')) {
-  creatList(city[selectedIndex[0]].sub[selectedIndex[1]].sub, third);
+  // creatList(city[selectedIndex[0]].sub[selectedIndex[1]].sub, third);
 } else {
   third = [{text: '', value: 0}];
 }
 
 var picker = new Picker({
-	data: [first, second, third],
+	data: [first, second],
   selectedIndex: selectedIndex,
 	title: '地址选择'
 });
@@ -40,7 +40,7 @@ var picker = new Picker({
 picker.on('picker.select', function (selectedVal, selectedIndex) {
   var text1 = first[selectedIndex[0]].text;
   var text2 = second[selectedIndex[1]].text;
-  var text3 = third[selectedIndex[2]] ? third[selectedIndex[2]].text : '';
+  // var text3 = third[selectedIndex[2]] ? third[selectedIndex[2]].text : '';
 
 	nameEl.innerText = text1 + ' ' + text2 + ' ' + text3;
 });
